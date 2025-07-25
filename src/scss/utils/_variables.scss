@@ -1,0 +1,20 @@
+:root {
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~color~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  --colorTextPrimary: #212121;
+  --colorSecondText: #757575;
+  --accenTextColor: #2196f3;
+  --backgroundDarkColorText: #2f303a;
+  --backgroundColorText: #ffffff;
+  --colorStroke: #ececec;
+  --logoColor: #000000;
+  --colorStrokeHeader: #f5f4fa;
+  --colorTextInFooter: #ffffff99;
+  --colorIcon: #afb1b8;
+  --colorIconImFooter: rgba(255, 255, 255, 0.1);
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~font~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+  --textPrimary: "Roboto", serif;
+  --textLogo: "Raleway", serif;
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~transition~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  --animationDuration: 250ms;
+  --animationType: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,144 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~modal~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  inset: 0;
+  transition-property: opacity;
+  transition-duration: var(--animationDuration);
+  transition-property: var(--animationType);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  background-color: var(--backgroundColorText);
+  position: absolute;
+  min-height: 581px;
+  min-width: 528px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  transition-property: transform;
+  transition-duration: var(--animationDuration);
+  transition-property: var(--animationType);
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-50%) scale(0.5);
+}
+.btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColorText);
+}
+.btn-close:hover .icon-close,
+.btn-close:hover {
+  cursor: pointer;
+  fill: var(--accenTextColor);
+}
+.icon-close {
+  width: 18px;
+  height: 18px;
+  fill: var(--logoColor);
+  transition-property: fill;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+.modal-fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: 12px 0 20px;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.form-label {
+  font-size: 12px;
+  color: var(--colorSecondText);
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form-field {
+  max-width: 448px;
+  padding: 11px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  transition-property: border-color;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.form-field:hover .form-icon,
+.form-field:hover,
+.form-field:focus-within .form-icon,
+.form-field:focus-within {
+  cursor: pointer;
+  fill: var(--accenTextColor);
+  border-color: #2196f3;
+}
+.comment-field {
+  padding: 12px 16px;
+}
+.form-input {
+  min-width: 90%;
+}
+.form-comment {
+  min-height: 96px;
+}
+.form-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--colorTextPrimary);
+  transition-property: fill;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  margin-bottom: 30px;
+}
+.agree-btn {
+  width: 16px;
+  height: 15px;
+}
+.agree-link {
+  color: var(--accenTextColor);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.modal-meta {
+  display: flex;
+  justify-content: center;
+}
+.modal-button {
+  color: var(--backgroundColorText);
+  padding: 10px 52px;
+}
+.no-scroll {
+  overflow: hidden;
+}

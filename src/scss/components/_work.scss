@@ -1,0 +1,31 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~work~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.work {
+  padding-bottom: 95px;
+}
+.work-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.work-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.work-item {
+  flex-basis: calc((100% - 60px) / 3);
+  position: relative;
+}
+.work-text {
+  font-weight: 700;
+  color: var(--backgroundColorText);
+  line-height: 1.14;
+  text-transform: uppercase;
+  position: absolute;
+  background-color: rgba(48, 49, 59, 0.8);
+  width: 100%;
+  padding: 27px 0 27px;
+  bottom: 0;
+  text-align: center;
+}

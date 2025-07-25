@@ -1,0 +1,43 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~regular-customers~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.regular-customers {
+  padding: 94px 0;
+}
+.regular-customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.regular-customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.regular-customer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  outline: 1px solid var(--colorIcon);
+  border-radius: 4px;
+  transition-property: outline;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.regular-customer-logo {
+  width: 106px;
+  height: 60px;
+  fill: var(--colorIcon);
+  transition-property: fill;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.regular-customer-link:hover {
+  outline: 1px solid var(--accenTextColor);
+}
+.regular-customer-link:hover .regular-customer-logo {
+  fill: var(--accenTextColor);
+}

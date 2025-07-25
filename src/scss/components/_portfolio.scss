@@ -1,0 +1,91 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~portfolio~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.portfolio {
+  padding: 95px 0px 95px 0px;
+}
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filter-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.filter-button {
+  font-size: 16;
+  border: none;
+  background-color: var(--colorStrokeHeader);
+  padding: 6px 22px;
+  border-radius: 4px;
+  line-height: 1.6;
+  letter-spacing: inherit;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.filter-button:hover {
+  color: var(--backgroundColorText);
+  background-color: var(--accenTextColor);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.project {
+  outline: 1px solid var(--colorStroke);
+  transition-property: box-shadow;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.project:hover {
+  box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.project:hover .project-overlay {
+  transform: translateY(0);
+}
+.project-photo {
+  position: relative;
+  overflow: hidden;
+}
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(207, 90%, 54%, 0.9);
+  padding: 63px 24px;
+  transform: translateY(101%);
+  transition-property: transform;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+}
+.text-project-overlay {
+  font-size: 18px;
+  color: var(--backgroundColorText);
+  line-height: 1.6;
+}
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 24px;
+}
+.project-category {
+  font-size: 16px;
+  color: var(--colorSecondText);
+  line-height: 1.8;
+}

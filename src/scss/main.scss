@@ -1,8 +1,16 @@
-body {
-  font-family: var(--textPrimary);
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--colorTextPrimary);
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-}
+@import "./utils/variables";
+@import "./global/reset";
+@import "./global/global";
+@import "./components/container";
+@import "./components/logo";
+@import "./components/button";
+@import "./components/social-networks";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/advantages";
+@import "./components/work";
+@import "./components/team";
+@import "./components/regular-customers";
+@import "./components/footer";
+@import "./components/portfolio";

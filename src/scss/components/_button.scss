@@ -1,0 +1,17 @@
+.button {
+  color: var(--backgroundColorText);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  background-color: var(--accenTextColor);
+  padding: 10px 32px;
+  border-radius: 4px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: 3px solid transparent;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition-property: color, border, background-color;
+  transition-duration: var(--animationDuration);
+  transition-timing-function: var(--animationType);
+  cursor: pointer;
+}
