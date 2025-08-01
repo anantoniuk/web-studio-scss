@@ -1,0 +1,42 @@
+.nav {
+  flex-grow: 2;
+}
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+.nav__item {
+  position: relative;
+}
+.nav__link {
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
+}
+.nav__link::after,
+.choice::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: $accenTextColor;
+  position: absolute;
+  left: 0;
+  bottom: -28px;
+  border-radius: 4px;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
+}
+.nav__link:hover::after,
+.choice::after {
+  transform: scale(1);
+}
+.nav__link:hover,
+.choice {
+  color: $accenTextColor;
+}

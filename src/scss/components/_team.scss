@@ -1,43 +1,43 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~team~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
 .team {
-  background-color: var(--colorStrokeHeader);
+  background-color: $colorStrokeHeader;
   padding: 95px 0px 95px 0px;
 }
-.team-title {
+.team__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 50px;
 }
-.team-list {
+.team__list {
   display: flex;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 }
-.team-item {
+.team__item {
   flex-basis: calc((100% - 90px) / 4);
 }
 .teammate {
-  background: var(--backgroundColorText);
+  background: $backgroundColorText;
   border-radius: 4px;
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
-.teammate-meta {
+.teammate__meta {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   padding-top: 30px;
 }
-.teammate-name {
+.teammate__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
 }
-.teammate-role {
+.teammate__role {
   font-size: 16px;
-  color: var(--colorSecondText);
+  color: $colorSecondText;
 }

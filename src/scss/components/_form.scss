@@ -1,15 +1,15 @@
-.form-content {
+.form__content {
   display: flex;
   flex-direction: column;
   row-gap: 4px;
 }
-.form-label {
+.form__label {
   font-size: 12px;
-  color: var(--colorSecondText);
+  color: $colorSecondText;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.form-field {
+.form__field {
   max-width: 448px;
   padding: 11px 12px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -18,31 +18,31 @@
   align-items: center;
   column-gap: 12px;
   transition-property: border-color;
-  transition-duration: var(--animationDuration);
-  transition-timing-function: var(--animationType);
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
 }
-.form-field:hover .form-icon,
-.form-field:hover,
-.form-field:focus-within .form-icon,
-.form-field:focus-within {
+.form__field:hover .form__icon,
+.form__field:hover,
+.form__field:focus-within .form__icon,
+.form__field:focus-within {
   cursor: pointer;
-  fill: var(--accenTextColor);
+  fill: $accenTextColor;
   border-color: #2196f3;
 }
-.comment-field {
+.comment__field {
   padding: 12px 16px;
 }
-.form-input {
+.form__input {
   min-width: 90%;
 }
-.form-comment {
+.form__comment {
   min-height: 96px;
 }
-.form-icon {
+.form__icon {
   width: 18px;
   height: 18px;
-  fill: var(--colorTextPrimary);
+  fill: $colorTextPrimary;
   transition-property: fill;
-  transition-duration: var(--animationDuration);
-  transition-timing-function: var(--animationType);
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
 }

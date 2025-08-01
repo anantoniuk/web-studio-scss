@@ -1,6 +1,6 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~hero~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
 .hero {
-  background-color: var(--backgroundDarkColorText);
+  background-color: $backgroundDarkColorText;
   background-image: linear-gradient(
       to bottom,
       rgba(47, 48, 58, 0.4),
@@ -11,26 +11,26 @@
   background-size: cover;
   padding: 200px 0px 200px 0px;
 }
-.hero-container {
+.hero__container {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
 }
-.hero-title {
+.hero__title {
   display: flex;
   max-width: 696px;
   font-size: 44px;
   font-weight: 900;
-  color: var(--backgroundColorText);
+  color: $backgroundColorText;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero-button:hover {
-  color: var(--accenTextColor);
-  border: 3px solid var(--accenTextColor);
-  background-color: var(--backgroundColorText);
+.hero__button:hover {
+  color: $accenTextColor;
+  border: 3px solid $accenTextColor;
+  background-color: $backgroundColorText;
   cursor: pointer;
 }

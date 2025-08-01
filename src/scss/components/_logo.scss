@@ -1,23 +1,23 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logo~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
-.logo-contrast {
-  font-family: var(--textLogo);
+.logo__contrast {
+  font-family: $textLogo;
   font-weight: 700;
   font-size: 26px;
-  color: var(--accenTextColor);
+  color: $accenTextColor;
   line-height: 1.154;
 }
-.logo-contrast:hover {
+.logo__contrast:hover {
   animation-name: pulse;
   animation-iteration-count: infinite;
 }
 .logo {
-  font-family: var(--textLogo);
+  font-family: $textLogo;
   font-weight: 700;
   font-size: 26px;
-  color: var(--logoColor);
+  color: $logoColor;
 
   line-height: 1.154;
 }
-.logo-white {
-  color: var(--backgroundColorText);
+.logo__white {
+  color: $backgroundColorText;
 }

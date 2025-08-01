@@ -1,4 +1,4 @@
-.social-networks-list {
+.social-networks__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -7,7 +7,7 @@
   margin-top: 16px;
   padding-bottom: 30px;
 }
-.social-networks-link {
+.social-networks__link {
   padding: 12px;
   background-color: transparent;
   border-radius: 50%;
@@ -15,20 +15,20 @@
   align-items: center;
   justify-content: center;
   transition-property: background-color;
-  transition-duration: var(--animationDuration);
-  transition-timing-function: var(--animationType);
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
+  &:hover {
+    background-color: $accenTextColor;
+    .social-networks__icon {
+      fill: $backgroundColorText;
+    }
+  }
 }
-.social-networks-icon {
+.social-networks__icon {
   width: 20px;
   height: 20px;
-  fill: var(--colorIcon);
+  fill: $colorIcon;
   transition-property: fill;
-  transition-duration: var(--animationDuration);
-  transition-timing-function: var(--animationType);
-}
-.social-networks-link:hover {
-  background-color: var(--accenTextColor);
-}
-.social-networks-link:hover .social-networks-icon {
-  fill: var(--backgroundColorText);
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
 }
