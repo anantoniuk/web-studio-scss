@@ -30,7 +30,7 @@
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.5);
 }
-.btn__close {
+.modal__btn-close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -61,7 +61,7 @@
   line-height: 1.15;
   text-align: center;
 }
-.modal__fields {
+.form__fields {
   display: flex;
   flex-direction: column;
   row-gap: 10px;

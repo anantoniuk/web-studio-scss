@@ -1,16 +1,16 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logo~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
-.logo__contrast {
+.logo {
   font-family: $textLogo;
   font-weight: 700;
   font-size: 26px;
   color: $accenTextColor;
   line-height: 1.154;
 }
-.logo__contrast:hover {
+.logo:hover {
   animation-name: pulse;
   animation-iteration-count: infinite;
 }
-.logo {
+.logo__part {
   font-family: $textLogo;
   font-weight: 700;
   font-size: 26px;
@@ -18,6 +18,6 @@
 
   line-height: 1.154;
 }
-.logo__white {
+.logo__part--white {
   color: $backgroundColorText;
 }

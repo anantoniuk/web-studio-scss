@@ -32,3 +32,30 @@
   transition-duration: $animationDuration;
   transition-timing-function: $animationType;
 }
+.social-networks__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: $backgroundColorText;
+  line-height: 1.14;
+}
+.footer .social-networks {
+  flex-grow: 2;
+}
+.footer .social-networks__list {
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-bottom: 0;
+}
+.social-networks__link--accent {
+  background-color: $colorIconImFooter;
+  transition-property: background-color;
+  transition-duration: $animationDuration;
+  transition-timing-function: $animationType;
+  &:hover {
+    background-color: $accenTextColor;
+  }
+}
+.social-networks__icon--grey {
+  fill: $backgroundColorText;
+}

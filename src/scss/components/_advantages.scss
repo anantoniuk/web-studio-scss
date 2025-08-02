@@ -25,18 +25,18 @@
   background-position: center;
   margin-bottom: 30px;
 }
-.photo__antenna::before {
+.advantages__item--antenna::before {
   background-image: url(../img/antenna.svg);
 }
-.photo__clock::before {
+.advantages__item--clock::before {
   background-image: url(../img/clock.svg);
 }
 
-.photo__diagram::before {
+.advantages__item--diagram::before {
   background-image: url(../img/diagram.svg);
 }
 
-.photo__astronaut::before {
+.advantages__item--astronaut::before {
   background-image: url(../img/astronaut.svg);
 }
 .advantages__title {
