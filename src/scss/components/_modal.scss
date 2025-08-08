@@ -3,9 +3,7 @@
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
   inset: 0;
-  transition-property: opacity;
-  transition-duration: $animationDuration;
-  transition-property: $animationType;
+  @include transition(opacity);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -23,9 +21,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  transition-property: transform;
-  transition-duration: $animationDuration;
-  transition-property: $animationType;
+  @include transition(transform);
 }
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.5);
@@ -37,9 +33,7 @@
   padding: 6px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-container(center, center);
   background-color: $backgroundColorText;
   &:hover .icon__close,
   &:hover {
@@ -51,9 +45,7 @@
   width: 18px;
   height: 18px;
   fill: $logoColor;
-  transition-property: fill;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(fill);
 }
 .modal__title {
   font-weight: 700;
@@ -62,15 +54,12 @@
   text-align: center;
 }
 .form__fields {
-  display: flex;
-  flex-direction: column;
+  @include flex-container($direction: column);
   row-gap: 10px;
   margin: 12px 0 20px;
 }
 .agree {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-container(center, center);
   column-gap: 8px;
   margin-bottom: 30px;
 }
@@ -84,8 +73,7 @@
   text-underline-offset: 3px;
 }
 .modal__meta {
-  display: flex;
-  justify-content: center;
+  @include flex-container(center);
 }
 .modal__button {
   color: $backgroundColorText;

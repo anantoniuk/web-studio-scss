@@ -3,13 +3,10 @@
   padding: 95px 0px 95px 0px;
 }
 .portfolio__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-container($align: center, $direction: column);
 }
 .filter__list {
-  display: flex;
-  gap: 8px;
+  @include flex-container($gap: 8px);
   margin-bottom: 50px;
 }
 .filter__button {
@@ -20,20 +17,16 @@
   border-radius: 4px;
   line-height: 1.6;
   letter-spacing: inherit;
-  transition-property: color, background-color, box-shadow;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(color, background-color, box-shadow);
   &:hover {
     color: $backgroundColorText;
     background-color: $accenTextColor;
     cursor: pointer;
-    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
-      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    @extend %card-shadow;
   }
 }
 .gallery__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flex-container($wrap: wrap);
   gap: 30px;
 }
 .gallery__item {
@@ -41,12 +34,9 @@
 }
 .project {
   outline: 1px solid $colorStroke;
-  transition-property: box-shadow;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(box-shadow);
   &:hover {
-    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
-      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    @extend %card-shadow;
     cursor: pointer;
     .project__overlay {
       transform: translateY(0);
@@ -63,11 +53,9 @@
   background-color: hsla(207, 90%, 54%, 0.9);
   padding: 63px 24px;
   transform: translateY(101%);
-  transition-property: transform;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(transform);
 }
-.text-project__overlay {
+.project-text__overlay {
   font-size: 18px;
   color: $backgroundColorText;
   line-height: 1.6;
@@ -79,8 +67,7 @@
   letter-spacing: 0.06em;
 }
 .project__meta {
-  display: flex;
-  flex-direction: column;
+  @include flex-container($direction: column);
   gap: 5px;
   padding: 20px 24px;
 }

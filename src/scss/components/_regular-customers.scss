@@ -10,22 +10,14 @@
   margin-bottom: 50px;
 }
 .regular-customers__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  @include flex-container(center, center, row, wrap, 30px);
 }
 .regular-customer__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-container(center, center);
   padding: 16px 32px;
   outline: 1px solid $colorIcon;
   border-radius: 4px;
-  transition-property: outline;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(outline);
   &:hover {
     outline: 1px solid $accenTextColor;
     .regular-customer__logo {
@@ -37,7 +29,5 @@
   width: 106px;
   height: 60px;
   fill: $colorIcon;
-  transition-property: fill;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(fill);
 }

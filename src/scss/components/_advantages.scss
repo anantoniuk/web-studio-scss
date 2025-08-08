@@ -3,17 +3,13 @@
   padding: 95px 0px 95px 0px;
 }
 .advantages__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include flex-container($wrap: wrap, $gap: 30px);
 }
 .advantages__item {
   flex-basis: calc((100% - 90px) / 4);
 }
 .advantages__meta {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @include flex-container($direction: column, $gap: 10px);
 }
 .advantages__item::before {
   content: "";

@@ -2,8 +2,7 @@
   flex-grow: 2;
 }
 .nav__list {
-  display: flex;
-  gap: 50px;
+  @include flex-container($gap: 50px);
 }
 .nav__item {
   position: relative;
@@ -13,9 +12,7 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition-property: color;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(color);
 }
 .nav__link::after,
 .choice::after {
@@ -28,9 +25,7 @@
   bottom: -28px;
   border-radius: 4px;
   transform: scale(0);
-  transition-property: transform;
-  transition-duration: $animationDuration;
-  transition-timing-function: $animationType;
+  @include transition(transform);
 }
 .nav__link:hover::after,
 .choice::after {

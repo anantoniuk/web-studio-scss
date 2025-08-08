@@ -9,9 +9,7 @@
   margin-bottom: 50px;
 }
 .work__list {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  @include flex-container($wrap: wrap, $gap: 30px);
 }
 .work__item {
   flex-basis: calc((100% - 60px) / 3);
