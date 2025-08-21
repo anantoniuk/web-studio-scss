@@ -1,12 +1,10 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~advantages~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile-------------------
 .advantages {
-  padding: 95px 0px 95px 0px;
+  padding: 60px 0;
 }
 .advantages__list {
-  @include flex-container($wrap: wrap, $gap: 30px);
-}
-.advantages__item {
-  flex-basis: calc((100% - 90px) / 4);
+  @include flex-container($direction: column, $wrap: wrap, $gap: 30px);
 }
 .advantages__meta {
   @include flex-container($direction: column, $gap: 10px);
@@ -36,9 +34,28 @@
   background-image: url(../img/astronaut.svg);
 }
 .advantages__title {
+  text-align: center;
   font-weight: 700;
   line-height: 1.14;
 }
 .advantages__text {
   color: $colorSecondText;
+}
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    @include flex-container($direction: row, $wrap: wrap, $gap: 30px);
+  }
+  .advantages__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .advantages {
+    padding: 95px 0px;
+  }
+  .advantages__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }

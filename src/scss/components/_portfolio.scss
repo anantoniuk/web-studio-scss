@@ -1,13 +1,14 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~portfolio~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile-------------------
 .portfolio {
-  padding: 95px 0px 95px 0px;
+  padding: 60px 0px;
 }
 .portfolio__container {
   @include flex-container($align: center, $direction: column);
 }
 .filter__list {
-  @include flex-container($gap: 8px);
-  margin-bottom: 50px;
+  @include flex-container($wrap: wrap, $gap: 8px);
+  margin-bottom: 40px;
 }
 .filter__button {
   font-size: 16;
@@ -26,11 +27,7 @@
   }
 }
 .gallery__list {
-  @include flex-container($wrap: wrap);
-  gap: 30px;
-}
-.gallery__item {
-  flex-basis: calc((100% - 60px) / 3);
+  @include flex-container($direction: column, $gap: 30px);
 }
 .project {
   outline: 1px solid $colorStroke;
@@ -51,7 +48,7 @@
   position: absolute;
   inset: 0;
   background-color: hsla(207, 90%, 54%, 0.9);
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(101%);
   @include transition(transform);
 }
@@ -74,5 +71,39 @@
 .project__category {
   font-size: 16px;
   color: $colorSecondText;
-  line-height: 1.8;
+  line-height: 1.87;
+}
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .portfolio__container {
+    @include flex-container(center, $direction: row, $wrap: wrap);
+  }
+  .filter__list {
+    margin-bottom: 30px;
+  }
+  .gallery__list {
+    @include flex-container(flex-start, center, row, wrap, 30px);
+  }
+  .gallery__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .project__overlay {
+    padding: 49px 24px 77px;
+  }
+}
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .portfolio {
+    padding: 95px 0px;
+  }
+  .filter__list {
+    margin-bottom: 50px;
+  }
+  .gallery__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .project__overlay {
+    padding: 63px 24px;
+  }
 }

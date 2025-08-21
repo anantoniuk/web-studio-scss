@@ -1,37 +1,66 @@
+// mobile-------------------
 .nav {
-  flex-grow: 2;
+  display: none;
 }
-.nav__list {
-  @include flex-container($gap: 50px);
+.btn-nav {
+  @include flex-container(center, center);
+  padding: 12px 8px;
+  background-color: $backgroundColorText;
 }
-.nav__item {
-  position: relative;
+.btn-nav__icon {
+  max-width: 24px;
+  max-height: 16px;
 }
-.nav__link {
-  font-size: inherit;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  @include transition(color);
+
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .btn-nav {
+    display: none;
+  }
+  .nav {
+    display: block;
+    flex-grow: 2;
+  }
+  .nav__list {
+    @include flex-container($gap: 50px);
+  }
+  .nav__item {
+    position: relative;
+  }
+  .nav__link {
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    @include transition(color);
+  }
+  .nav__link::after,
+  .choice::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $accenTextColor;
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+    border-radius: 4px;
+    transform: scale(0);
+    @include transition(transform);
+  }
+  .nav__link:hover::after,
+  .choice::after {
+    transform: scale(1);
+  }
+  .nav__link:hover,
+  .choice {
+    color: $accenTextColor;
+  }
 }
-.nav__link::after,
-.choice::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: $accenTextColor;
-  position: absolute;
-  left: 0;
-  bottom: -28px;
-  border-radius: 4px;
-  transform: scale(0);
-  @include transition(transform);
-}
-.nav__link:hover::after,
-.choice::after {
-  transform: scale(1);
-}
-.nav__link:hover,
-.choice {
-  color: $accenTextColor;
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .nav__link::after,
+  .choice::after {
+    bottom: -28px;
+  }
 }

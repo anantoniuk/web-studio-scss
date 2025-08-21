@@ -1,29 +1,38 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~work~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile and tablet-------------------
 .work {
-  padding-bottom: 95px;
+  display: none;
 }
-.work__title {
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.work__list {
-  @include flex-container($wrap: wrap, $gap: 30px);
-}
-.work__item {
-  flex-basis: calc((100% - 60px) / 3);
-  position: relative;
-}
-.work__text {
-  font-weight: 700;
-  color: $backgroundColorText;
-  line-height: 1.14;
-  text-transform: uppercase;
-  position: absolute;
-  background-color: rgba(48, 49, 59, 0.8);
-  width: 100%;
-  padding: 27px 0 27px;
-  bottom: 0;
-  text-align: center;
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .work {
+    display: block;
+    padding-bottom: 95px;
+  }
+  .work__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .work__list {
+    @include flex-container($wrap: wrap, $gap: 30px);
+  }
+  .work__item {
+    flex-basis: calc((100% - 60px) / 3);
+    position: relative;
+  }
+  .work__text {
+    font-weight: 700;
+    color: $backgroundColorText;
+    line-height: 1.14;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: rgba(48, 49, 59, 0.8);
+    width: 100%;
+    padding: 27px 0 27px;
+    bottom: 0;
+    text-align: center;
+  }
 }
