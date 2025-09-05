@@ -1,0 +1,53 @@
+.menu-toggle {
+  position: relative;
+  z-index: 9;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 10px;
+}
+.menu-check {
+  display: none;
+}
+.menu-toggle::after,
+.menu-toggle::before {
+  content: "";
+}
+.menu-toggle::before,
+.menu-toggle__line,
+.menu-toggle::after {
+  width: 100%;
+  height: 2px;
+  background-color: $logoColor;
+  position: absolute;
+  left: 0;
+  @include transition(top, transform);
+}
+.menu-toggle::before {
+  top: 0;
+}
+.menu-toggle__line {
+  top: calc(50% - 1px);
+}
+.menu-toggle::after {
+  top: calc(100% - 2px);
+}
+.menu-check:checked ~ .menu-toggle {
+  &::before {
+    top: calc(50% - 1px);
+    transform: rotate(-225deg);
+  }
+  .menu-toggle__line {
+    transform-origin: center;
+    transform: scaleX(0);
+  }
+  &::after {
+    top: calc(50% - 1px);
+    transform: rotate(225deg);
+  }
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}

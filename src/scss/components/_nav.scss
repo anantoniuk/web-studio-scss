@@ -1,25 +1,29 @@
 // mobile-------------------
-.nav {
-  display: none;
+.mobile-menu__wrapp {
+  @include flex-container(space-between, stretch, column);
 }
-.btn-nav {
-  @include flex-container(center, center);
-  padding: 12px 8px;
-  background-color: $backgroundColorText;
+.nav__list {
+  @include flex-container($direction: column, $gap: 35px);
 }
-.btn-nav__icon {
-  max-width: 24px;
-  max-height: 16px;
+.nav__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  @include transition(color);
+}
+.nav__link:hover,
+.choice {
+  color: $accenTextColor;
 }
 
 // tablet-------------------
 @media screen and (min-width: 768px) {
-  .btn-nav {
-    display: none;
+  .mobile-menu__wrapp {
+    @include flex-container(space-between, center, row);
   }
   .nav {
-    display: block;
-    flex-grow: 2;
+    flex: 2;
   }
   .nav__list {
     @include flex-container($gap: 50px);
@@ -29,10 +33,6 @@
   }
   .nav__link {
     font-size: inherit;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    @include transition(color);
   }
   .nav__link::after,
   .choice::after {

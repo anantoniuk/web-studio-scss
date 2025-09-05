@@ -1,0 +1,22 @@
+@media (max-width: 767px) {
+  .mobile-menu__wrapp {
+    background-color: $backgroundColorText;
+    position: fixed;
+    inset: 0;
+    padding: 48px 40px;
+    transform: translateX(-100%);
+    @include transition(transform);
+  }
+  .mobile-menu__check:checked ~ .mobile-menu__wrapp {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu__label {
+    display: none;
+  }
+  .mobile-menu__check {
+    display: none;
+  }
+}

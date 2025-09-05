@@ -1,0 +1,27 @@
+.networks {
+  @include flex-container(center, center, $gap: 20px);
+}
+.network__link {
+  font-weight: 500;
+  font-size: 18px;
+  color: $accenTextColor;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 1px;
+    height: 100%;
+    background-color: $colorTextPrimary;
+    opacity: 0.2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .networks {
+    display: none;
+  }
+}

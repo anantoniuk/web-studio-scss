@@ -1,8 +1,45 @@
 // mobile-------------------
+.contact-wrapp {
+  @include flex-container(center, stretch, column, $gap: 64px);
+}
 .contacts {
+  @include flex-container(center, flex-start, column-reverse, wrap, 32px);
+}
+.contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  color: $colorSecondText;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  @include transition(color);
+  &:hover {
+    color: $accenTextColor;
+  }
+}
+.contacts__link--tel {
+  font-weight: 500;
+  font-size: 34px;
+  color: $accenTextColor;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  @include transition(color);
+  &:hover {
+    color: $accenTextColor;
+  }
+}
+.contacts__icon {
+  fill: $colorSecondText;
+  @include transition(fill);
+  .contacts__link:hover & {
+    fill: $accenTextColor;
+  }
+}
+.contacts__icon-envelope {
   display: none;
 }
-
+.contacts__icon-smartphone {
+  display: none;
+}
 // tablet-------------------
 @media screen and (min-width: 768px) {
   .contacts {
