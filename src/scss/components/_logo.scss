@@ -1,0 +1,35 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logo~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile and tablet-------------------
+.logo {
+  font-family: $textLogo;
+  font-weight: 700;
+  font-size: 24px;
+  color: $accenTextColor;
+  line-height: 1.17;
+}
+.logo:hover {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+}
+.logo__part {
+  font-family: $textLogo;
+  font-weight: 700;
+  font-size: 24px;
+  color: $logoColor;
+  line-height: 1.17;
+}
+.logo__part--white {
+  color: $backgroundColorText;
+}
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.154;
+  }
+  .logo__part {
+    font-size: 26px;
+    line-height: 1.154;
+  }
+}

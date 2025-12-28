@@ -1,0 +1,19 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~header~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile-------------------
+.header {
+  padding: 16px 0px;
+  box-shadow: inset 0 -1px 0 0 $colorStroke;
+}
+.header__container {
+  @include flex-container(space-between, center);
+}
+
+// tablet and desktop-------------------
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 25px 0px;
+  }
+  .header__container {
+    @include flex-container($align: center, $gap: 93px);
+  }
+}

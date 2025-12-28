@@ -1,0 +1,58 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~regular-customers~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// mobile-------------------
+.regular-customers {
+  padding: 60px 0;
+}
+.regular-customers__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.regular-customers__list {
+  @include flex-container(center, center, row, wrap, 30px);
+}
+.regular-customer__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.regular-customer__link {
+  @include flex-container(center, center);
+  min-height: 92px;
+  outline: 1px solid $colorIcon;
+  border-radius: 4px;
+  @include transition(outline);
+  &:hover {
+    outline: 1px solid $accenTextColor;
+    .regular-customer__logo {
+      fill: $accenTextColor;
+    }
+  }
+}
+.regular-customer__logo {
+  width: 106px;
+  height: 60px;
+  fill: $colorIcon;
+  @include transition(fill);
+}
+
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .regular-customer__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .regular-customers {
+    padding: 94px 0;
+  }
+  .regular-customers__title {
+    font-size: 36px;
+  }
+
+  .regular-customer__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}

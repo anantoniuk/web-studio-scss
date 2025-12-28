@@ -4,7 +4,7 @@ const closeBtn = document.querySelector("[data-modal-close]");
 
 const handleToggleModal = () => {
   modal.classList.toggle("is-hidden");
-  document.body.classList.toggle("no-scroll");
+  document.body.classList.toggle("no__scroll");
 };
 
 openBtn.addEventListener("click", handleToggleModal);

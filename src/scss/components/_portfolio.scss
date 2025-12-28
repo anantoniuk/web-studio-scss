@@ -1,0 +1,109 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~portfolio~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+// mobile-------------------
+.portfolio {
+  padding: 60px 0px;
+}
+.portfolio__container {
+  @include flex-container($align: center, $direction: column);
+}
+.filter__list {
+  @include flex-container($wrap: wrap, $gap: 8px);
+  margin-bottom: 40px;
+}
+.filter__button {
+  font-size: 16;
+  border: none;
+  background-color: $colorStrokeHeader;
+  padding: 6px 22px;
+  border-radius: 4px;
+  line-height: 1.6;
+  letter-spacing: inherit;
+  @include transition(color, background-color, box-shadow);
+  &:hover {
+    color: $backgroundColorText;
+    background-color: $accenTextColor;
+    cursor: pointer;
+    @extend %card-shadow;
+  }
+}
+.gallery__list {
+  @include flex-container($direction: column, $gap: 30px);
+}
+.project {
+  outline: 1px solid $colorStroke;
+  @include transition(box-shadow);
+  &:hover {
+    @extend %card-shadow;
+    cursor: pointer;
+    .project__overlay {
+      transform: translateY(0);
+    }
+  }
+}
+.project__photo {
+  position: relative;
+  overflow: hidden;
+}
+.project__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(207, 90%, 54%, 0.9);
+  padding: 77px 24px;
+  transform: translateY(101%);
+  @include transition(transform);
+}
+.project-text__overlay {
+  font-size: 18px;
+  color: $backgroundColorText;
+  line-height: 1.6;
+}
+.project__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project__meta {
+  @include flex-container($direction: column);
+  gap: 5px;
+  padding: 20px 24px;
+}
+.project__category {
+  font-size: 16px;
+  color: $colorSecondText;
+  line-height: 1.87;
+}
+// tablet-------------------
+@media screen and (min-width: 768px) {
+  .portfolio__container {
+    @include flex-container(center, $direction: row, $wrap: wrap);
+  }
+  .filter__list {
+    margin-bottom: 30px;
+  }
+  .gallery__list {
+    @include flex-container(flex-start, center, row, wrap, 30px);
+  }
+  .gallery__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .project__overlay {
+    padding: 49px 24px 77px;
+  }
+}
+
+// desktop-------------------
+@media screen and (min-width: 1024px) {
+  .portfolio {
+    padding: 95px 0px;
+  }
+  .filter__list {
+    margin-bottom: 50px;
+  }
+  .gallery__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .project__overlay {
+    padding: 63px 24px;
+  }
+}

@@ -1,0 +1,46 @@
+.social-networks__list {
+  @include flex-container(center, center, row, wrap, 10px);
+  margin-top: 16px;
+  padding-bottom: 30px;
+}
+.social-networks__link {
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  @include flex-container(center, center);
+  @include transition(background-color);
+  &:hover {
+    background-color: $accenTextColor;
+    .social-networks__icon {
+      fill: $backgroundColorText;
+    }
+  }
+}
+.social-networks__icon {
+  width: 20px;
+  height: 20px;
+  fill: $colorIcon;
+  @include transition(fill);
+}
+.social-networks__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: $backgroundColorText;
+  line-height: 1.14;
+}
+.footer .social-networks__list {
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-bottom: 0;
+}
+.social-networks__link--accent {
+  background-color: $colorIconImFooter;
+  @include transition(background-color);
+  &:hover {
+    background-color: $accenTextColor;
+  }
+}
+.social-networks__icon--grey {
+  fill: $backgroundColorText;
+}
